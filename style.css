@@ -1,0 +1,29 @@
+* {
+    border: 1px solid red;
+    padding: 5px;
+    margin: 5px;
+}
+
+body {
+    font-family: 'Lobster', cursive;
+    font-size: 20px;
+    text-align: center;
+    line-height: 1;
+}
+
+.mainContainer {
+    display: grid;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.square {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    background: #32bacf;
+    margin: 10px;
+    text-align: center;
+}
