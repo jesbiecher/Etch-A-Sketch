@@ -31,3 +31,11 @@
     margin: 10px;
     text-align: center;
 }
+
+.headerContainer {
+    background-color: #32bacf;
+}
+
+.settingsContainer {
+    background-color: #2691a2;
+}

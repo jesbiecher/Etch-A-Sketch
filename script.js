@@ -1,36 +1,7 @@
 
-// VARIABLES
+// GLOBAL VARIABLES
 const mainContainerEl = document.querySelector('.mainContainer');
-const buttons = document.querySelectorAll('.gridSizeButton');
 let gridSizeEl = 10;
-
-// we use the .forEach method to iterate through each button
-buttons.forEach((button) => {
-    // and for each one we add a 'click' listener
-    button.addEventListener('click', () => {
-        if (button.id == 'xSmall') {
-            gridSizeEl = 10;
-            console.log(gridSizeEl);
-            creatingGrid();
-        } else if (button.id == 'small') {
-            gridSizeEl = 20;
-            console.log(gridSizeEl);
-            creatingGrid();
-        } else if (button.id == 'medium') {
-            gridSizeEl = 30;
-            console.log(gridSizeEl);
-            creatingGrid();
-        } else if (button.id == 'large') {
-            gridSizeEl = 40;
-            console.log(gridSizeEl);
-            creatingGrid();
-        } else if (button.id == 'xLarge') {
-            gridSizeEl = 50;
-            console.log(gridSizeEl);
-            creatingGrid();
-        }
-    });
-});
 
 // FUNCTIONS
 function createGrid(val) {
@@ -60,11 +31,51 @@ function creatingGrid() {
 }
 
 //MOUSEOVER
-function mouseOver() {
-    document.querySelector(".gridSizeButton").style.color = "red";
+function mouseOver(box) {
+    console.log('Inside mouseOver: ' + box.classList.value);
+    box.style.background = "black";
+    box.classList.add('blackBackground');
 }
 
-//MOUSEOVER
-function mouseOut() {
-    document.querySelector(".gridSizeButton").style.color = "black";
-}
+//GRID SIZE
+const buttons = document.querySelectorAll('.gridSizeButton');
+buttons.forEach((button) => {
+    // and for each one we add a 'click' listener
+    button.addEventListener('click', () => {
+        if (button.id == 'xSmall') {
+            gridSizeEl = 10;
+            console.log(gridSizeEl);
+            creatingGrid();
+        } else if (button.id == 'small') {
+            gridSizeEl = 20;
+            console.log(gridSizeEl);
+            creatingGrid();
+        } else if (button.id == 'medium') {
+            gridSizeEl = 30;
+            console.log(gridSizeEl);
+            creatingGrid();
+        } else if (button.id == 'large') {
+            gridSizeEl = 40;
+            console.log(gridSizeEl);
+            creatingGrid();
+        } else if (button.id == 'xLarge') {
+            gridSizeEl = 50;
+            console.log(gridSizeEl);
+            creatingGrid();
+        }
+    })
+});
+
+// BOXES BACKGROUND
+const boxes = document.querySelectorAll('.box');
+boxes.forEach((box) => {
+    box.addEventListener('mouseover', () => {
+    if (box.classList.contains('blackBackground')) {
+        console.log('If already black ' + box.classList.value);
+    } else {
+            console.log('If not yet black: ' + box.classList.value);
+            mouseOver(box)
+        }
+    })
+});
+
