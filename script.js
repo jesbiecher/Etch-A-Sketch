@@ -9,23 +9,18 @@ buttons.forEach((button) => {
     button.addEventListener('click', () => {
         if (button.id == 'xSmall') {
             gridSizeEl = 10;
-            console.log('You chose GridSize: ' + gridSizeEl);
             creatingGrid();
         } else if (button.id == 'small') {
             gridSizeEl = 20;
-            console.log('You chose GridSize: ' + gridSizeEl);
             creatingGrid();
         } else if (button.id == 'medium') {
             gridSizeEl = 30;
-            console.log('You chose GridSize: ' + gridSizeEl);
             creatingGrid();
         } else if (button.id == 'large') {
             gridSizeEl = 40;
-            console.log('You chose GridSize: ' + gridSizeEl);
             creatingGrid();
         } else if (button.id == 'xLarge') {
             gridSizeEl = 50;
-            console.log('You chose GridSize: ' + gridSizeEl);
             creatingGrid();
         }
     })
@@ -34,17 +29,13 @@ buttons.forEach((button) => {
 //GRID COLOR
 const colorButtons = document.querySelectorAll('.squareColorButton');
 colorButtons.forEach((colorButton) => {
-    // and for each one we add a 'click' listener
     colorButton.addEventListener('click', () => {
         if (colorButton.id == 'black') {
             colorOrBlack = 'black';
-            console.log('You clicked: ' + colorOrBlack);
         } else if (colorButton.id == 'red') {
             colorOrBlack = 'red';
-            console.log('You clicked: ' + colorOrBlack);
         } else if (colorButton.id == 'white') {
             colorOrBlack = 'white';
-            console.log('You clicked: ' + colorOrBlack);
         }
     })
 });
@@ -77,13 +68,10 @@ function boxesBackground() {
             if (colorOrBlack == null) {
                 alert('You have to pick a color first!');
             } else if (colorOrBlack == 'black') {
-                console.log('You picked: ' + colorOrBlack);
                 onMouseOverBlack(box);
             } else if (colorOrBlack == 'red') {
-                console.log('You picked: ' + colorOrBlack);
                 onMouseOverColor(box);
             } else if (colorOrBlack == 'white') {
-                console.log('You picked: ' + colorOrBlack);
                 onMouseOverWhite(box);
             }
         })
