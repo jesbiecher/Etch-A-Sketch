@@ -39,8 +39,8 @@ colorButtons.forEach((colorButton) => {
         if (colorButton.id == 'black') {
             colorOrBlack = 'black';
             console.log('You clicked: ' + colorOrBlack);
-        } else if (colorButton.id == 'color') {
-            colorOrBlack = 'color';
+        } else if (colorButton.id == 'red') {
+            colorOrBlack = 'red';
             console.log('You clicked: ' + colorOrBlack);
         } else if (colorButton.id == 'white') {
             colorOrBlack = 'white';
@@ -79,7 +79,7 @@ function boxesBackground() {
             } else if (colorOrBlack == 'black') {
                 console.log('You picked: ' + colorOrBlack);
                 onMouseOverBlack(box);
-            } else if (colorOrBlack == 'color') {
+            } else if (colorOrBlack == 'red') {
                 console.log('You picked: ' + colorOrBlack);
                 onMouseOverColor(box);
             } else if (colorOrBlack == 'white') {
